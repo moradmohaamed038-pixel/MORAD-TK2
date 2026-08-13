@@ -1,0 +1,73 @@
+name: morad_tk_app
+description: منصة MORAD_TK الشاملة للتحكم بلوحات IoT محلياً وسحابياً - نسخة Enterprise
+publish_to: 'none'
+version: 2.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # الاكتشاف المحلي عبر mDNS
+  multicast_dns: ^0.3.2+6
+
+  # الاتصال المحلي الفوري باللوحة
+  web_socket_channel: ^2.4.0
+
+  # السحابة (Firebase)
+  firebase_core: ^2.27.0
+  firebase_database: ^10.4.0
+  firebase_auth: ^4.17.0
+  cloud_functions: ^4.6.0
+
+  # إدارة الحالة
+  provider: ^6.1.2
+
+  # تخزين محلي بسيط
+  shared_preferences: ^2.2.2
+
+  # طلب صلاحيات
+  permission_handler: ^11.3.0
+
+  # أدوات عامة
+  uuid: ^4.3.3
+  cupertino_icons: ^1.0.6
+
+  # الرسوم البيانية والمخططات (اختيارية)
+  fl_chart: ^0.65.0
+
+  # الصور والملفات
+  image_picker: ^1.1.2
+  file_picker: ^6.1.1
+
+  # الرسوم المتحركة المتقدمة
+  animations: ^2.0.11
+
+  # الإشعارات المحلية
+  flutter_local_notifications: ^17.1.2
+
+  # التوقيت والتواريخ
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # الأصول (الصور والخطوط)
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  # الخطوط المخصصة (اختياري)
+  # fonts:
+  #   - family: Arabic
+  #     fonts:
+  #       - asset: assets/fonts/Arabic-Regular.ttf
+  #       - asset: assets/fonts/Arabic-Bold.ttf
+  #         weight: 700
