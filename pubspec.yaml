@@ -1,14 +1,35 @@
-workflows:
-  default-workflow:
-    name: Default Workflow
-    environment:
-      flutter: stable
-      groups:
-        - credentials
-    scripts:
-      - name: Get flutter packages
-        script: flutter packages get
-      - name: Build APK
-        script: flutter build apk --release
-    artifacts:
-      - build/app/outputs/flutter-apk/*.apk
+name: morad_tk
+description: تطبيق التحكم بالأجهزة الذكية
+
+publish_to: 'none'
+version: 2.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  firebase_core: ^2.24.0
+  firebase_database: ^10.2.0
+  firebase_auth: ^4.14.0
+  provider: ^6.1.0
+  web_socket_channel: ^2.4.0
+  multicast_dns: ^0.3.0
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.18.0
+  uuid: ^4.0.0
+  shared_preferences: ^2.2.0
+  flutter_local_notifications: ^14.1.0
+  fl_chart: ^0.64.0
+  image_picker: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
